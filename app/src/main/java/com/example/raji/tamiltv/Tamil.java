@@ -30,6 +30,11 @@ public class Tamil extends Activity {
     private String channel13Url;
     private String channel14Url;
     private String channel15Url;
+    private String channel16Url;
+    private String channel17Url;
+    private String channel18Url;
+    private String channel19Url;
+    private String channel20Url;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -45,6 +50,11 @@ public class Tamil extends Activity {
     private Button button13;
     private Button button14;
     private Button button15;
+    private Button button16;
+    private Button button17;
+    private Button button18;
+    private Button button19;
+    private Button button20;
 
 
 
@@ -158,6 +168,43 @@ public class Tamil extends Activity {
                 goTo15Display();
             }
         });
+        button16 = (Button) findViewById(R.id.button16);
+        button16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo16Display();
+            }
+        });
+        button17 = (Button) findViewById(R.id.button17);
+        button17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo17Display();
+            }
+        });
+        button18 = (Button) findViewById(R.id.button18);
+        button18.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo18Display();
+            }
+        });
+        button19 = (Button) findViewById(R.id.button19);
+        button19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo19Display();
+            }
+        });
+        button20 = (Button) findViewById(R.id.button20);
+        button20.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo20Display();
+            }
+        });
+
+
         //firebaseUpdate();
         Firebase channels = new Firebase("https://tamiltv.firebaseio.com/");
         channels.child("channel-1/").addValueEventListener(new ValueEventListener() {
@@ -340,6 +387,67 @@ public class Tamil extends Activity {
 
             }
         });
+        channels.child("channel-16/").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button16.setText((String)dataSnapshot.child("name").getValue());
+                channel16Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-17/").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button17.setText((String)dataSnapshot.child("name").getValue());
+                channel17Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-18/").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button18.setText((String)dataSnapshot.child("name").getValue());
+                channel18Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-19/").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button19.setText((String)dataSnapshot.child("name").getValue());
+                channel19Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-20/").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button20.setText((String)dataSnapshot.child("name").getValue());
+                channel20Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+
 
 
     }
@@ -358,6 +466,56 @@ public class Tamil extends Activity {
 //            }
 //        });
 //    }
+    public void goTo20Display(){
+    Intent intent = new Intent(Intent.ACTION_VIEW );
+    intent.setDataAndType(Uri.parse(channel20Url), "video/*");
+    //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
+    Bundle bundle = new Bundle();
+    bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+    intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+    startActivity(intent);
+
+}
+    public void goTo19Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel19Url), "video/*");
+        //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
+    public void goTo18Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel18Url), "video/*");
+        //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
+    public void goTo17Display(){
+    Intent intent = new Intent(Intent.ACTION_VIEW );
+    intent.setDataAndType(Uri.parse(channel17Url), "video/*");
+    //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
+    Bundle bundle = new Bundle();
+    bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+    intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+    startActivity(intent);
+
+}
+    public void goTo16Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel16Url), "video/*");
+        //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
     public void goTo15Display(){
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel15Url), "video/*");
@@ -370,7 +528,7 @@ public class Tamil extends Activity {
     }
     public void goTo14Display(){
         Intent intent = new Intent(Intent.ACTION_VIEW );
-        intent.setDataAndType(Uri.parse(channel4Url), "video/*");
+        intent.setDataAndType(Uri.parse(channel14Url), "video/*");
         //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/s4fhimym.m3u8"), "video/*");
         Bundle bundle = new Bundle();
         bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
@@ -436,7 +594,7 @@ public class Tamil extends Activity {
     }
     public void goTo4Display() {
         Intent intent = new Intent(Intent.ACTION_VIEW );
-        intent.setDataAndType(Uri.parse(channel5Url), "video/*");
+        intent.setDataAndType(Uri.parse(channel4Url), "video/*");
         //intent.setDataAndType(Uri.parse("http://ibctamil.zecast.net/ibctamil/smil:ibctamil.smil/playlist.m3u8"), "video/*");
         startActivity(intent);
     }
