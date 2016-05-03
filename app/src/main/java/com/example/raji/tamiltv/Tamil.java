@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.provider.Browser;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 import android.widget.Button;
 
 import com.firebase.client.DataSnapshot;
