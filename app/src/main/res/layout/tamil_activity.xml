@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Tamil">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EETV"
+        android:id="@+id/button1"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:width="200dp"
+        android:height="100dp"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TTN TV"
+        android:id="@+id/button2"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VASANTH TV"
+        android:id="@+id/button3"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:width="200dp"
+        android:height="100dp"
+        android:clickable="true"
+        android:enabled="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ibc tamil"
+        android:id="@+id/button4"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mega"
+        android:id="@+id/button5"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_above="@+id/button7"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAMILVISION"
+        android:id="@+id/button6"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_above="@+id/button7"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignStart="@+id/button3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEWS7"
+        android:id="@+id/button7"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thanthi"
+        android:id="@+id/button10"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignTop="@+id/button7"
+        android:layout_alignStart="@+id/button5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pothigai"
+        android:id="@+id/button9"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="47dp"
+        android:layout_below="@+id/button6" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siripoli"
+        android:id="@+id/button8"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button7"
+        android:layout_alignEnd="@+id/button7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saras"
+        android:id="@+id/button11"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignTop="@+id/button8"
+        android:layout_alignEnd="@+id/button10" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="athavan"
+        android:id="@+id/button12"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button10"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:id="@+id/button13"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button8"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HIMYM"
+        android:id="@+id/button14"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/button13" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="office"
+        android:id="@+id/button15"
+        android:height="100dp"
+        android:width="200dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/button12"
+        android:layout_alignStart="@+id/button12" />
+
+</RelativeLayout>
