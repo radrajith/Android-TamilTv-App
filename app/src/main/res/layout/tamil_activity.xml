@@ -11,7 +11,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EETV"
+        android:text="channel 1"
         android:id="@+id/button1"
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentLeft="true"
@@ -24,7 +24,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TTN TV"
+        android:text="channel 2"
         android:id="@+id/button2"
         android:height="100dp"
         android:width="200dp"
@@ -36,7 +36,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="VASANTH TV"
+        android:text="channel 3"
         android:id="@+id/button3"
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentRight="true"
@@ -49,7 +49,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ibc tamil"
+        android:text="channel 4"
         android:id="@+id/button4"
         android:height="100dp"
         android:width="200dp"
@@ -62,7 +62,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Mega"
+        android:text="channel 5"
         android:id="@+id/button5"
         android:height="100dp"
         android:width="200dp"
@@ -74,7 +74,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TAMILVISION"
+        android:text="channel 6"
         android:id="@+id/button6"
         android:height="100dp"
         android:width="200dp"
@@ -87,7 +87,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEWS7"
+        android:text="channel 7"
         android:id="@+id/button7"
         android:height="100dp"
         android:width="200dp"
@@ -100,7 +100,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Thanthi"
+        android:text="cahnnel 10"
         android:id="@+id/button10"
         android:height="100dp"
         android:width="200dp"
@@ -112,7 +112,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="pothigai"
+        android:text="channel 9"
         android:id="@+id/button9"
         android:height="100dp"
         android:width="200dp"
@@ -126,7 +126,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Siripoli"
+        android:text="channel 8"
         android:id="@+id/button8"
         android:height="100dp"
         android:width="200dp"
@@ -138,7 +138,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Saras"
+        android:text="channel 11"
         android:id="@+id/button11"
         android:height="100dp"
         android:width="200dp"
@@ -150,7 +150,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="athavan"
+        android:text="channel 12"
         android:id="@+id/button12"
         android:height="100dp"
         android:width="200dp"
@@ -162,7 +162,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Friends"
+        android:text="channel 13"
         android:id="@+id/button13"
         android:height="100dp"
         android:width="200dp"
@@ -174,7 +174,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HIMYM"
+        android:text="channel 14"
         android:id="@+id/button14"
         android:height="100dp"
         android:width="200dp"
@@ -187,7 +187,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="office"
+        android:text="channel 15"
         android:id="@+id/button15"
         android:height="100dp"
         android:width="200dp"
