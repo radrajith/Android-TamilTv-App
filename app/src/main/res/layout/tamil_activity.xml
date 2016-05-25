@@ -269,6 +269,61 @@
                 android:enabled="true"
                 android:layout_below="@+id/button17"
                 android:layout_alignStart="@+id/button17" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel 21"
+                android:id="@+id/button21"
+                android:height="100dp"
+                android:width="200dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:layout_below="@+id/button18"
+                android:layout_alignStart="@+id/button18" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel 22"
+                android:id="@+id/button22"
+                android:height="100dp"
+                android:width="200dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:layout_below="@+id/button19"
+                android:layout_alignStart="@+id/button19" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel 23"
+                android:id="@+id/button23"
+                android:height="100dp"
+                android:width="200dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:layout_below="@+id/button20"
+                android:layout_alignStart="@+id/button20" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel 24"
+                android:id="@+id/button24"
+                android:height="100dp"
+                android:width="200dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:layout_below="@+id/button21"
+                android:layout_alignStart="@+id/button21" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="channel 25"
+                android:id="@+id/button25"
+                android:height="100dp"
+                android:width="200dp"
+                android:clickable="true"
+                android:enabled="true"
+                android:layout_below="@+id/button22"
+                android:layout_alignStart="@+id/button22" />
        </RelativeLayout>
     </ScrollView>
 

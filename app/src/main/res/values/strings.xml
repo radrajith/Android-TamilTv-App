@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TamilTv</string>
    <!--<string name="title_activity_main">MainActivity</string> -->
-    <string name="title_activity_main">TamilTv</string>
+    <string name="title_activity_main">தமிழ் தொலைக்காட்சி</string>
 </resources>

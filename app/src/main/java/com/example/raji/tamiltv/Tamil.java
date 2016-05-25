@@ -35,6 +35,12 @@ public class Tamil extends Activity {
     private String channel18Url;
     private String channel19Url;
     private String channel20Url;
+    private String channel21Url;
+    private String channel22Url;
+    private String channel23Url;
+    private String channel24Url;
+    private String channel25Url;
+
     private Button button1;
     private Button button2;
     private Button button3;
@@ -55,7 +61,11 @@ public class Tamil extends Activity {
     private Button button18;
     private Button button19;
     private Button button20;
-
+    private Button button21;
+    private Button button22;
+    private Button button23;
+    private Button button24;
+    private Button button25;
 
 
     @Override
@@ -63,6 +73,7 @@ public class Tamil extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tamil_activity);
         Firebase.setAndroidContext(this);
+        firebaseUpdate();
         button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -203,11 +214,351 @@ public class Tamil extends Activity {
                 goTo20Display();
             }
         });
+        button21 = (Button) findViewById(R.id.button21);
+        button21.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo21Display();
+            }
+        });
+        button22 = (Button) findViewById(R.id.button22);
+        button22.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo22Display();
+            }
+        });
+        button23 = (Button) findViewById(R.id.button23);
+        button23.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo23Display();
+            }
+        });
+        button24 = (Button) findViewById(R.id.button24);
+        button24.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo24Display();
+            }
+        });
+        button25 = (Button) findViewById(R.id.button25);
+        button25.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goTo25Display();
+            }
+        });
+
+//
+//
+//        Firebase channels = new Firebase("https://tamiltv.firebaseio.com/");
+//        channels.child("channel-1/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button1.setText((String)dataSnapshot.child("name").getValue());
+//                channel1Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-2/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button2.setText((String)dataSnapshot.child("name").getValue());
+//                channel2Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-3/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button3.setText((String)dataSnapshot.child("name").getValue());
+//                channel3Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-4/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button4.setText((String)dataSnapshot.child("name").getValue());
+//                channel4Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-5/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button5.setText((String)dataSnapshot.child("name").getValue());
+//                channel5Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-6/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button6.setText((String)dataSnapshot.child("name").getValue());
+//                channel6Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-7/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button7.setText((String)dataSnapshot.child("name").getValue());
+//                channel7Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-8/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button8.setText((String)dataSnapshot.child("name").getValue());
+//                channel8Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-9/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button9.setText((String)dataSnapshot.child("name").getValue());
+//                channel9Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-10/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button10.setText((String)dataSnapshot.child("name").getValue());
+//                channel10Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-11/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button11.setText((String)dataSnapshot.child("name").getValue());
+//                channel11Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-12/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button12.setText((String)dataSnapshot.child("name").getValue());
+//                channel12Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-13/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button13.setText((String)dataSnapshot.child("name").getValue());
+//                channel13Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-14/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button14.setText((String)dataSnapshot.child("name").getValue());
+//                channel14Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-15/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button15.setText((String)dataSnapshot.child("name").getValue());
+//                channel15Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-16/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button16.setText((String)dataSnapshot.child("name").getValue());
+//                channel16Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-17/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button17.setText((String)dataSnapshot.child("name").getValue());
+//                channel17Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-18/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button18.setText((String)dataSnapshot.child("name").getValue());
+//                channel18Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-19/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button19.setText((String)dataSnapshot.child("name").getValue());
+//                channel19Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-20/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button20.setText((String)dataSnapshot.child("name").getValue());
+//                channel20Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-21/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button21.setText((String)dataSnapshot.child("name").getValue());
+//                channel21Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-22/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button22.setText((String)dataSnapshot.child("name").getValue());
+//                channel22Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-23/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button23.setText((String)dataSnapshot.child("name").getValue());
+//                channel23Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-24/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button24.setText((String)dataSnapshot.child("name").getValue());
+//                channel24Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
+//        channels.child("channel-25/").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                button25.setText((String)dataSnapshot.child("name").getValue());
+//                channel25Url = (String)dataSnapshot.child("url").getValue();
+//            }
+//
+//            @Override
+//            public void onCancelled(FirebaseError firebaseError) {
+//
+//            }
+//        });
 
 
-        //firebaseUpdate();
+    }
+    public void firebaseUpdate(){
         Firebase channels = new Firebase("https://tamiltv.firebaseio.com/");
-        channels.child("channel-1/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-1/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button1.setText((String)dataSnapshot.child("name").getValue());
@@ -219,7 +570,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-2/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-2/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button2.setText((String)dataSnapshot.child("name").getValue());
@@ -231,7 +582,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-3/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-3/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button3.setText((String)dataSnapshot.child("name").getValue());
@@ -243,7 +594,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-4/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-4/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button4.setText((String)dataSnapshot.child("name").getValue());
@@ -255,7 +606,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-5/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-5/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button5.setText((String)dataSnapshot.child("name").getValue());
@@ -267,7 +618,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-6/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-6/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button6.setText((String)dataSnapshot.child("name").getValue());
@@ -279,7 +630,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-7/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-7/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button7.setText((String)dataSnapshot.child("name").getValue());
@@ -291,7 +642,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-8/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-8/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button8.setText((String)dataSnapshot.child("name").getValue());
@@ -303,7 +654,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-9/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-9/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button9.setText((String)dataSnapshot.child("name").getValue());
@@ -315,7 +666,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-10/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-10/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button10.setText((String)dataSnapshot.child("name").getValue());
@@ -327,7 +678,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-11/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-11/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button11.setText((String)dataSnapshot.child("name").getValue());
@@ -339,7 +690,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-12/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-12/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button12.setText((String)dataSnapshot.child("name").getValue());
@@ -351,7 +702,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-13/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-13/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button13.setText((String)dataSnapshot.child("name").getValue());
@@ -363,7 +714,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-14/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-14/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button14.setText((String)dataSnapshot.child("name").getValue());
@@ -375,7 +726,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-15/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-15/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button15.setText((String)dataSnapshot.child("name").getValue());
@@ -387,7 +738,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-16/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-16/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button16.setText((String)dataSnapshot.child("name").getValue());
@@ -399,7 +750,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-17/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-17/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button17.setText((String)dataSnapshot.child("name").getValue());
@@ -411,7 +762,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-18/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-18/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button18.setText((String)dataSnapshot.child("name").getValue());
@@ -423,7 +774,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-19/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-19/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button19.setText((String)dataSnapshot.child("name").getValue());
@@ -435,7 +786,7 @@ public class Tamil extends Activity {
 
             }
         });
-        channels.child("channel-20/").addValueEventListener(new ValueEventListener() {
+        channels.child("channel-20/").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 button20.setText((String)dataSnapshot.child("name").getValue());
@@ -447,25 +798,113 @@ public class Tamil extends Activity {
 
             }
         });
+        channels.child("channel-21/").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button21.setText((String)dataSnapshot.child("name").getValue());
+                channel21Url = (String)dataSnapshot.child("url").getValue();
+            }
 
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
 
+            }
+        });
+        channels.child("channel-22/").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button22.setText((String)dataSnapshot.child("name").getValue());
+                channel22Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-23/").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button23.setText((String)dataSnapshot.child("name").getValue());
+                channel23Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-24/").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button24.setText((String)dataSnapshot.child("name").getValue());
+                channel24Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+        channels.child("channel-25/").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                button25.setText((String)dataSnapshot.child("name").getValue());
+                channel25Url = (String)dataSnapshot.child("url").getValue();
+            }
+
+            @Override
+            public void onCancelled(FirebaseError firebaseError) {
+
+            }
+        });
+    }
+
+    public void goTo21Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel21Url), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
 
     }
-//    public void firebaseUpdate(){
-//        Firebase channels = new Firebase("https://tamiltv.firebaseio.com/");
-//        channels.child("channel-1/").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                channel1Url =(String)dataSnapshot.child("url").getValue();
-//                System.out.println(channel1Url);
-//            }
-//
-//            @Override
-//            public void onCancelled(FirebaseError firebaseError) {
-//
-//            }
-//        });
-//    }
+    public void goTo22Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel22Url), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
+    public void goTo23Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel23Url), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
+    public void goTo24Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel24Url), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
+    public void goTo25Display(){
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.parse(channel25Url), "video/*");
+        Bundle bundle = new Bundle();
+        bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
+        intent.putExtra(Browser.EXTRA_HEADERS, bundle);
+        startActivity(intent);
+
+    }
     public void goTo20Display(){
     Intent intent = new Intent(Intent.ACTION_VIEW );
     intent.setDataAndType(Uri.parse(channel20Url), "video/*");
@@ -577,7 +1016,7 @@ public class Tamil extends Activity {
     public void goTo7Display(){
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel7Url), "video/*");
-        intent.setDataAndType(Uri.parse("http://d2voe16cs5psaw.cloudfront.net/news7new/smil:news7new.smil/chunklist_w2061316371_b894000_sleng.m3u8"), "video/*");
+        //intent.setDataAndType(Uri.parse("http://d2voe16cs5psaw.cloudfront.net/news7new/smil:news7new.smil/chunklist_w2061316371_b894000_sleng.m3u8"), "video/*");
         startActivity(intent);
     }
     public void goTo6Display(){
