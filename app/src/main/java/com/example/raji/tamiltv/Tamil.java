@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
+import android.os.Environment;
 import android.provider.Browser;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -13,6 +16,9 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+import java.io.File;
+//to connect to tv
+//C:\Users\radra\AppData\Local\Android\sdk\platform-tools>adb connect 192.168.1.170:5555
 public class Tamil extends Activity {
     private Firebase ref;
     private String channel1Url;
@@ -40,7 +46,7 @@ public class Tamil extends Activity {
     private String channel23Url;
     private String channel24Url;
     private String channel25Url;
-
+    private int status;
     private Button button1;
     private Button button2;
     private Button button3;
@@ -66,7 +72,7 @@ public class Tamil extends Activity {
     private Button button23;
     private Button button24;
     private Button button25;
-
+    private static final String TAG = "MyActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -859,8 +865,23 @@ public class Tamil extends Activity {
             }
         });
     }
-
+//    @Override
+    /* CODE TO FIND keymaps of the remote
+    go to logcat at the bottom of the window
+     */
+//    public boolean dispatchKeyEvent(KeyEvent event) {
+//
+//        if (event.getAction() == KeyEvent.ACTION_DOWN) {
+//            Log.e(TAG, "Key down, code " + event.getKeyCode());
+//
+//        } else if (event.getAction() == KeyEvent.ACTION_UP) {
+//            Log.e(TAG, "Key up, code " + event.getKeyCode());
+//        }
+//
+//        return true;
+//    }
     public void goTo21Display(){
+        status = 21;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel21Url), "video/*");
         Bundle bundle = new Bundle();
@@ -870,6 +891,7 @@ public class Tamil extends Activity {
 
     }
     public void goTo22Display(){
+        status = 22;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel22Url), "video/*");
         Bundle bundle = new Bundle();
@@ -879,6 +901,7 @@ public class Tamil extends Activity {
 
     }
     public void goTo23Display(){
+        status = 23;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel23Url), "video/*");
         Bundle bundle = new Bundle();
@@ -888,6 +911,7 @@ public class Tamil extends Activity {
 
     }
     public void goTo24Display(){
+        status =24;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel24Url), "video/*");
         Bundle bundle = new Bundle();
@@ -897,15 +921,27 @@ public class Tamil extends Activity {
 
     }
     public void goTo25Display(){
+        status = 25;
+        /*
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel25Url), "video/*");
         Bundle bundle = new Bundle();
         bundle.putString("User-Agent", ":http-user-agent=HTTP/1.1");
         intent.putExtra(Browser.EXTRA_HEADERS, bundle);
         startActivity(intent);
+        */
+        //read from file stuff
+        int episode = (int)Math.random()*200 +1;
+        File vidFile = new File(channel25Url+episode+".mkv");
+        System.out.println(vidFile);
+        Intent intent = new Intent(Intent.ACTION_VIEW );
+        intent.setDataAndType(Uri.fromFile(vidFile), "video/*");
+        startActivity(intent);
+
 
     }
     public void goTo20Display(){
+        status = 20;
     Intent intent = new Intent(Intent.ACTION_VIEW );
     intent.setDataAndType(Uri.parse(channel20Url), "video/*");
     //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
@@ -916,6 +952,7 @@ public class Tamil extends Activity {
 
 }
     public void goTo19Display(){
+        status = 19;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel19Url), "video/*");
         //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
@@ -926,6 +963,7 @@ public class Tamil extends Activity {
 
     }
     public void goTo18Display(){
+        status = 18;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel18Url), "video/*");
         //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
@@ -936,6 +974,7 @@ public class Tamil extends Activity {
 
     }
     public void goTo17Display(){
+        status = 17;
     Intent intent = new Intent(Intent.ACTION_VIEW );
     intent.setDataAndType(Uri.parse(channel17Url), "video/*");
     //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
@@ -946,6 +985,7 @@ public class Tamil extends Activity {
 
 }
     public void goTo16Display(){
+        status = 16;
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.parse(channel16Url), "video/*");
         //intent.setDataAndType(Uri.parse("http://62.210.107.171:8080/29f4c47c8f0aa856f05cfe7ae4a15d76eb477684b099239d281c27e5c3a6aed8/hls/theoffice.m3u8"), "video/*");
