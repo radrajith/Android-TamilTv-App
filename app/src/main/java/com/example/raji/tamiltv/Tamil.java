@@ -21,6 +21,7 @@ import java.io.File;
 //C:\Users\radra\AppData\Local\Android\sdk\platform-tools>adb connect 192.168.1.170:5555
 public class Tamil extends Activity {
     private Firebase ref;
+    private int episode = (int)(Math.random()*200+1);
     private String channel1Url;
     private String channel2Url;
     private String channel3Url;
@@ -931,9 +932,10 @@ public class Tamil extends Activity {
         startActivity(intent);
         */
         //read from file stuff
-        int episode = (int)Math.random()*200 +1;
+
+        //System.out.println((int)(Math.random()*200+1));
         File vidFile = new File(channel25Url+episode+".mkv");
-        System.out.println(vidFile);
+        //System.out.println(vidFile);
         Intent intent = new Intent(Intent.ACTION_VIEW );
         intent.setDataAndType(Uri.fromFile(vidFile), "video/*");
         startActivity(intent);
